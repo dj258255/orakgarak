@@ -1,0 +1,69 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+  
+    {
+      "type": "java",
+      "name": "Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "OrakgarakiApplication",
+      "request": "launch",
+      "mainClass": "com.ssafy.lab.orak.OrakgarakiApplication",
+      "projectName": "orak-back",
+      "env": {
+        "DB_HOST_LOCAL": "localhost",
+        "DB_PORT_LOCAL": "3306",
+        "DB_NAME_LOCAL": "orakgaraki",
+        "DB_USERNAME_LOCAL": "ssafy",
+        "DB_PASSWORD_LOCAL": "ssafy",
+        
+        "DB_USERNAME_TEST": "sa",
+        "DB_PASSWORD_TEST": "",
+        
+        "DB_HOST_PROD": "localhost",
+        "DB_PORT_PROD": "3306",
+        "DB_NAME_PROD": "orakgaraki",
+        "DB_USERNAME_PROD": "orakgaraki",
+        "DB_PASSWORD_PROD": "F4Dtn5aRItDt9pXH",
+        
+        "REDIS_HOST": "localhost",
+        "REDIS_PORT": "6379",
+        "REDIS_PASSWORD": "iOk0VgClHgSyJJYQFncorBB1YXdZzE5W78lbVVhttWwDl25z2U",
+        
+        "JWT_SECRET": "9rF8kL2mN5qP7sT1wX4bG6hJ3dA8cK0nM9vB5zQ7yE2uI6oR4tY1pL8sF3gH6jA",
+        "JWT_EXPIRATION": "86400000", 
+        "JWT_REFRESH_EXPIRATION": "604800000",
+        
+        "GOOGLE_CLIENT_ID": "1027351300528-48tapjo2f2nrto5ecghq010k83gqf2nh.apps.googleusercontent.com",
+        "GOOGLE_CLIENT_SECRET": "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",
+        "GOOGLE_REDIRECT_URI": "http://localhost:8080/api/login/oauth2/code/google",
+        
+        "OAUTH2_REDIRECT_URI": "http://localhost:5173/login/success",
+        
+        "CORS_ALLOWED_ORIGINS": "https://orakgaraki.com,https://www.orakgaraki.com",
+        
+        "SSL_KEYSTORE_PATH": "/app/ssl/keystore.p12",
+        "SSL_KEYSTORE_PASSWORD": "your-keystore-password",
+        "SSL_KEY_ALIAS": "orakgaraki",
+        
+        "SWAGGER_ENABLED": "false",
+        
+        "AWS_ACCESS_KEY_ID": "AKIAYQNJSPSUGVZTZEO7",
+        "AWS_SECRET_ACCESS_KEY": "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",
+        "AWS_REGION": "ap-northeast-2",
+        "AWS_S3_BUCKET": "ssafy-orak-s3-bucket",
+        
+        "SERVER_PORT": "8080",
+        
+        "SPRING_PROFILES_ACTIVE": "local"
+      }
+    }
+  ]
+}
