@@ -40,7 +40,6 @@ services:
       - orakgaraki-network
 
   app:
-    user: "root"
     build:
       context: .
       dockerfile: Dockerfile
