@@ -26,10 +26,12 @@
 - **Zustand** - 상태 관리
 - **React Hooks** - 커스텀 훅 (useAudio, useAuth 등)
 
-### Backend (예정)
+### Backend
 
-- **Node.js** + **Express**
-- **MongoDB** - 데이터베이스
+- **Spring Boot 3.5** + **Java 17**
+- **MySQL**, **Redis** - 데이터베이스, 캐시
+- **Kafka** - 파일 업로드 후처리와 AI 분석 요청 파이프라인
+- **FastAPI** - 음성 특징 추출과 노래 추천(Python)
 - **JWT** - 인증
 - **Google OAuth** - 소셜 로그인
 
@@ -252,6 +254,26 @@ useState 대신 useMemo로 메모이제이션 적용하여 렌더링 성능 개�
 4. 긴급 수정 시:  
    → `main`에서 `hotfix/이슈명` 브랜치 생성  
    → 수정 후 `main` + `develop`에 각각 merge
+
+---
+
+## 일정과 작업 방식
+
+SSAFY 13기 교육 과정에서 6인 팀(프론트엔드 2, 백엔드 3, AI 1)이 2025년 8월 25일부터 9월 29일까지 5주 동안 만들었습니다.
+
+| 기간 | 한 일 | 산출물 |
+|---|---|---|
+| 1주차 (08.25~09.01) | 저장소와 Docker Compose, 폴더 구조 준비 | 모노레포 구조, 개발 환경 |
+| 2주차 (09.02~09.08) | Spring Boot, React 초기 세팅, 멜스펙트로그램 추출 구현 | 백엔드/프론트 뼈대, 음성 특징 추출 프로토타입 |
+| 3주차 (09.09~09.15) | 파일 업로드, 녹음, 앨범, 마이페이지 등 핵심 기능 구현 | 핵심 기능 모듈 |
+| 4주차 (09.16~09.22) | 기능 이어 붙이기와 통합 | 통합된 서비스 |
+| 5주차 (09.23~09.29) | 모니터링, Kafka 이벤트 파이프라인, 마무리 수정 | Prometheus·Grafana·Loki 모니터링, Kafka 파이프라인 |
+
+`git log` 기준 전체 커밋 702개 중 주차별로 7, 9, 139, 226, 321개가 찍혀 있습니다. 3주차부터 커밋이 급격히 늘었습니다.
+
+작업은 원래 GitLab 이슈와 MR로 관리했습니다. 저장소에 이슈 템플릿(`.gitlab/issue_templates/FEAT_ISSUE.md`)과 MR 템플릿(`.gitlab/merge_request_templates/MR_TEMPLATE.md`)이 남아 있습니다. 브랜치는 `Feature/updateFE`, `Feature/mypage`처럼 설명형 이름을 주로 썼습니다. 문서화는 처음엔 Swagger로 API를 전부 문서화했지만 개발 중 API가 자주 바뀌면서 2주차부터 플로우차트로 전체 흐름만 먼저 공유하고 세부 스펙은 구현하면서 맞추는 방식으로 바꿨습니다.
+
+프로젝트를 만든 배경과 판단 과정은 [블로그 소개 글](https://dj258255.github.io/IT-Oasis/blog/project/orakgarak/orakgarak-retrospective/)에 더 자세히 적었습니다.
 
 ---
 ## 📄 라이선스
